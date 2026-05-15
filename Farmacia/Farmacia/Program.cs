@@ -1,207 +1,213 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace Mercado
+using System.Threading;
+
+namespace Farmacia
+
 {
+
     internal class Program
+
     {
+
         static void Main(string[] args)
+
         {
+
             int opcao = 0;
 
             while (opcao != 5)
+
             {
-                Console.ForegroundColor = ConsoleColor.Yellow;
+
+                Console.ForegroundColor = ConsoleColor.Green;
+
                 Console.WriteLine(@"
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-█████╗█████╗█████╗█████╗█████╗█████╗
-╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
- 
-██████╗░███████╗███╗░░░███╗░░░░░░██╗░░░██╗██╗███╗░░██╗██████╗░░█████╗░	░█████╗░░█████╗░
-██╔══██╗██╔════╝████╗░████║░░░░░░██║░░░██║██║████╗░██║██╔══██╗██╔══██╗	██╔══██╗██╔══██╗
-██████╦╝█████╗░░██╔████╔██║█████╗╚██╗░██╔╝██║██╔██╗██║██║░░██║██║░░██║	███████║██║░░██║
-██╔══██╗██╔══╝░░██║╚██╔╝██║╚════╝░╚████╔╝░██║██║╚████║██║░░██║██║░░██║	██╔══██║██║░░██║
-██████╦╝███████╗██║░╚═╝░██║░░░░░░░░╚██╔╝░░██║██║░╚███║██████╔╝╚█████╔╝	██║░░██║╚█████╔╝
-╚═════╝░╚══════╝╚═╝░░░░░╚═╝░░░░░░░░░╚═╝░░░╚═╝╚═╝░░╚══╝╚═════╝░░╚════╝░	╚═╝░░╚═╝░╚════╝░
- 
-░██████╗██╗░░░██╗██████╗░███████╗██████╗░███╗░░░███╗███████╗██████╗░░█████╗░░█████╗░██████╗░░█████╗░██╗
-██╔════╝██║░░░██║██╔══██╗██╔════╝██╔══██╗████╗░████║██╔════╝██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║
-╚█████╗░██║░░░██║██████╔╝█████╗░░██████╔╝██╔████╔██║█████╗░░██████╔╝██║░░╚═╝███████║██║░░██║██║░░██║██║
-░╚═══██╗██║░░░██║██╔═══╝░██╔══╝░░██╔══██╗██║╚██╔╝██║██╔══╝░░██╔══██╗██║░░██╗██╔══██║██║░░██║██║░░██║╚═╝
-██████╔╝╚██████╔╝██║░░░░░███████╗██║░░██║██║░╚═╝░██║███████╗██║░░██║╚█████╔╝██║░░██║██████╔╝╚█████╔╝██╗
-╚═════╝░░╚═════╝░╚═╝░░░░░╚══════╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚══════╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝╚═════╝░░╚════╝░╚═╝
- 
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-█████╗█████╗█████╗█████╗█████╗█████╗
-╚════╝╚════╝╚════╝╚════╝╚════╝╚════╝
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░");
+
+███████╗░█████╗░██████╗░███╗░░░███╗░█████╗░░█████╗░██╗░█████╗░
+
+██╔════╝██╔══██╗██╔══██╗████╗░████║██╔══██╗██╔══██╗██║██╔══██╗
+
+█████╗░░███████║██████╔╝██╔████╔██║███████║██║░░╚═╝██║███████║
+
+██╔══╝░░██╔══██║██╔══██╗██║╚██╔╝██║██╔══██║██║░░██╗██║██╔══██║
+
+██║░░░░░██║░░██║██║░░██║██║░╚═╝░██║██║░░██║╚█████╔╝██║██║░░██║
+
+╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░░░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝╚═╝░░╚═╝
+
+");
+
                 Console.ResetColor();
-                Console.WriteLine("\nBem Vindo ao Sistema de Cadastro do Mercado\n");
-                Console.WriteLine(" 1 - Cadastrar produtos : ");
-                Console.WriteLine(" 2 - Cadastar clientes : ");
-                Console.WriteLine(" 3 - Cadastrar funcionarios : ");
-                Console.WriteLine(" 4 - Cadastrar fornecedores : ");
-                Console.WriteLine(" 5 - Sair : ");
-                Console.Write("\nDigite a opção desejada: ");
+
+                Console.WriteLine("\nBem vindo ao Sistema da Farmácia\n");
+
+                Console.WriteLine("1 - Cadastrar medicamentos");
+
+                Console.WriteLine("2 - Cadastrar clientes");
+
+                Console.WriteLine("3 - Cadastrar funcionários");
+
+                Console.WriteLine("4 - Cadastrar fornecedores");
+
+                Console.WriteLine("5 - Sair");
+
+                Console.Write("\nDigite a opção: ");
+
                 opcao = int.Parse(Console.ReadLine());
 
                 Console.Clear();
+
                 switch (opcao)
 
                 {
+
                     case 1:
 
-                        CadastrarProdutos();
+                        CadastrarMedicamentos();
 
                         break;
+
                     case 2:
+
                         CadastrarClientes();
 
                         break;
+
                     case 3:
+
                         CadastrarFuncionarios();
 
                         break;
+
                     case 4:
+
                         CadastrarFornecedores();
 
                         break;
+
                     case 5:
-                        Console.WriteLine("\nSaindo do sistema...");
+
+                        Console.WriteLine("Saindo do sistema...");
+
                         break;
+
                     default:
-                        Console.WriteLine("\nOpção inválida. Por favor, tente novamente.");
+
+                        Console.WriteLine("Opção inválida!");
+
                         Thread.Sleep(1500);
+
                         break;
+
                 }
-
-
 
             }
 
-
         }
 
-        static void CadastrarProdutos()
+        static void CadastrarMedicamentos()
+
         {
 
-            Console.WriteLine(@"
-░█████╗░░█████╗░██████╗░░█████╗░░██████╗████████╗██████╗░░█████╗░	██████╗░███████╗
-██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔══██╗	██╔══██╗██╔════╝
-██║░░╚═╝███████║██║░░██║███████║╚█████╗░░░░██║░░░██████╔╝██║░░██║	██║░░██║█████╗░░
-██║░░██╗██╔══██║██║░░██║██╔══██║░╚═══██╗░░░██║░░░██╔══██╗██║░░██║	██║░░██║██╔══╝░░
-╚█████╔╝██║░░██║██████╔╝██║░░██║██████╔╝░░░██║░░░██║░░██║╚█████╔╝	██████╔╝███████╗
-░╚════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░	╚═════╝░╚══════╝
- 
-██████╗░██████╗░░█████╗░██████╗░██╗░░░██╗████████╗░█████╗░░██████╗
-██╔══██╗██╔══██╗██╔══██╗██╔══██╗██║░░░██║╚══██╔══╝██╔══██╗██╔════╝
-██████╔╝██████╔╝██║░░██║██║░░██║██║░░░██║░░░██║░░░██║░░██║╚█████╗░
-██╔═══╝░██╔══██╗██║░░██║██║░░██║██║░░░██║░░░██║░░░██║░░██║░╚═══██╗
-██║░░░░░██║░░██║╚█████╔╝██████╔╝╚██████╔╝░░░██║░░░╚█████╔╝██████╔╝
-╚═╝░░░░░╚═╝░░╚═╝░╚════╝░╚═════╝░░╚═════╝░░░░╚═╝░░░░╚════╝░╚═════╝░");
+            Console.WriteLine("\n=== CADASTRO DE MEDICAMENTOS ===\n");
 
-            Console.WriteLine("\nDigite o nome do produto: ");
-            string nomeProduto = Console.ReadLine();
-            Console.WriteLine("Digite a descrição do produto: ");
-            string descricaoProduto = Console.ReadLine();
-            Console.WriteLine("Digite o preço do produto: ");
-            string precoProduto = Console.ReadLine();
-            Console.WriteLine("Digite a quantidade do produto: ");
-            string quantidadeProduto = Console.ReadLine();
-            Console.WriteLine("Produto cadastrado com sucesso!");
+            Console.Write("Nome do medicamento: ");
+
+            string nome = Console.ReadLine();
+
+            Console.Write("Descrição: ");
+
+            string descricao = Console.ReadLine();
+
+            Console.Write("Preço: ");
+
+            string preco = Console.ReadLine();
+
+            Console.Write("Quantidade: ");
+
+            string quantidade = Console.ReadLine();
+
+            Console.WriteLine("\nMedicamento cadastrado com sucesso!");
+
+            Thread.Sleep(1500);
 
         }
-
-
 
         static void CadastrarClientes()
+
         {
-            Console.WriteLine(@"
-░█████╗░░█████╗░██████╗░░█████╗░░██████╗████████╗██████╗░░█████╗░	██████╗░███████╗
-██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔══██╗	██╔══██╗██╔════╝
-██║░░╚═╝███████║██║░░██║███████║╚█████╗░░░░██║░░░██████╔╝██║░░██║	██║░░██║█████╗░░
-██║░░██╗██╔══██║██║░░██║██╔══██║░╚═══██╗░░░██║░░░██╔══██╗██║░░██║	██║░░██║██╔══╝░░
-╚█████╔╝██║░░██║██████╔╝██║░░██║██████╔╝░░░██║░░░██║░░██║╚█████╔╝	██████╔╝███████╗
-░╚════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░	╚═════╝░╚══════╝
- 
-░█████╗░██╗░░░░░██╗███████╗███╗░░██╗████████╗███████╗░██████╗
-██╔══██╗██║░░░░░██║██╔════╝████╗░██║╚══██╔══╝██╔════╝██╔════╝
-██║░░╚═╝██║░░░░░██║█████╗░░██╔██╗██║░░░██║░░░█████╗░░╚█████╗░
-██║░░██╗██║░░░░░██║██╔══╝░░██║╚████║░░░██║░░░██╔══╝░░░╚═══██╗
-╚█████╔╝███████╗██║███████╗██║░╚███║░░░██║░░░███████╗██████╔╝
-░╚════╝░╚══════╝╚═╝╚══════╝╚═╝░░╚══╝░░░╚═╝░░░╚══════╝╚═════╝░");
-            Console.Write("Digite o nome do cliente: ");
-            string nomeCliente = Console.ReadLine();
-            Console.Write("Digite o CPF do cliente: ");
-            string cpfCliente = Console.ReadLine();
-            Console.Write("Digite o telefone do cliente: ");
-            string telefoneCliente = Console.ReadLine();
-            Console.WriteLine("Cliente cadastrado com sucesso!");
+
+            Console.WriteLine("\n=== CADASTRO DE CLIENTES ===\n");
+
+            Console.Write("Nome do cliente: ");
+
+            string nome = Console.ReadLine();
+
+            Console.Write("CPF do cliente: ");
+
+            string cpf = Console.ReadLine();
+
+            Console.Write("Telefone do cliente: ");
+
+            string telefone = Console.ReadLine();
+
+            Console.WriteLine("\nCliente cadastrado com sucesso!");
+
             Thread.Sleep(1500);
+
         }
 
         static void CadastrarFuncionarios()
+
         {
-            Console.WriteLine(@"
-░█████╗░░█████╗░██████╗░░█████╗░░██████╗████████╗██████╗░░█████╗░	██████╗░███████╗
-██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔══██╗	██╔══██╗██╔════╝
-██║░░╚═╝███████║██║░░██║███████║╚█████╗░░░░██║░░░██████╔╝██║░░██║	██║░░██║█████╗░░
-██║░░██╗██╔══██║██║░░██║██╔══██║░╚═══██╗░░░██║░░░██╔══██╗██║░░██║	██║░░██║██╔══╝░░
-╚█████╔╝██║░░██║██████╔╝██║░░██║██████╔╝░░░██║░░░██║░░██║╚█████╔╝	██████╔╝███████╗
-░╚════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░	╚═════╝░╚══════╝
- 
-███████╗██╗░░░██╗███╗░░██╗░█████╗░██╗░█████╗░███╗░░██╗░█████╗░██████╗░██╗░█████╗░░██████╗
-██╔════╝██║░░░██║████╗░██║██╔══██╗██║██╔══██╗████╗░██║██╔══██╗██╔══██╗██║██╔══██╗██╔════╝
-█████╗░░██║░░░██║██╔██╗██║██║░░╚═╝██║██║░░██║██╔██╗██║███████║██████╔╝██║██║░░██║╚█████╗░
-██╔══╝░░██║░░░██║██║╚████║██║░░██╗██║██║░░██║██║╚████║██╔══██║██╔══██╗██║██║░░██║░╚═══██╗
-██║░░░░░╚██████╔╝██║░╚███║╚█████╔╝██║╚█████╔╝██║░╚███║██║░░██║██║░░██║██║╚█████╔╝██████╔╝
-╚═╝░░░░░░╚═════╝░╚═╝░░╚══╝░╚════╝░╚═╝░╚════╝░╚═╝░░╚══╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░╚════╝░╚═════╝░");
-            Console.Write("Digite o nome do funcionário: ");
+
+            Console.WriteLine("\n=== CADASTRO DE FUNCIONÁRIOS ===\n");
+
+            Console.Write("Nome do funcionário: ");
+
             string nome = Console.ReadLine();
-            Console.Write("Digite o cargo do funcionário: ");
-            string cargo = Console.ReadLine();
-            Console.Write("Digite o salário do funcionário: ");
+
+            Console.Write("Função do funcionário: ");
+
+            string funcao = Console.ReadLine();
+
+            Console.Write("Salário: ");
+
             string salario = Console.ReadLine();
-            Console.WriteLine("Funcionário cadastrado com sucesso!");
+
+            Console.WriteLine("\nFuncionário cadastrado com sucesso!");
+
             Thread.Sleep(1500);
+
         }
 
         static void CadastrarFornecedores()
-        {
-            Console.WriteLine(@"
-░█████╗░░█████╗░██████╗░░█████╗░░██████╗████████╗██████╗░░█████╗░  ██████╗░███████╗
-██╔══██╗██╔══██╗██╔══██╗██╔══██╗██╔════╝╚══██╔══╝██╔══██╗██╔══██╗  ██╔══██╗██╔════╝
-██║░░╚═╝███████║██║░░██║███████║╚█████╗░░░░██║░░░██████╔╝██║░░██║  ██║░░██║█████╗░░
-██║░░██╗██╔══██║██║░░██║██╔══██║░╚═══██╗░░░██║░░░██╔══██╗██║░░██║  ██║░░██║██╔══╝░░
-╚█████╔╝██║░░██║██████╔╝██║░░██║██████╔╝░░░██║░░░██║░░██║╚█████╔╝  ██████╔╝███████╗
-░╚════╝░╚═╝░░╚═╝╚═════╝░╚═╝░░╚═╝╚═════╝░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░  ╚═════╝░╚══════╝
 
-███████╗░█████╗░██████╗░███╗░░██╗███████╗░█████╗░███████╗██████╗░░█████╗░██████╗░
-██╔════╝██╔══██╗██╔══██╗████╗░██║██╔════╝██╔══██╗██╔════╝██╔══██╗██╔══██╗██╔══██╗
-█████╗░░██║░░██║██████╔╝██╔██╗██║█████╗░░██║░░╚═╝█████╗░░██║░░██║██║░░██║██████╔╝
-██╔══╝░░██║░░██║██╔══██╗██║╚████║██╔══╝░░██║░░██╗██╔══╝░░██║░░██║██║░░██║██╔══██╗
-██║░░░░░╚█████╔╝██║░░██║██║░╚███║███████╗╚█████╔╝███████╗██████╔╝╚█████╔╝██║░░██║
-╚═╝░░░░░░╚════╝░╚═╝░░╚═╝╚═╝░░╚══╝╚══════╝░╚════╝░╚══════╝╚═════╝░░╚════╝░╚═╝░░╚═╝");
-            Console.Write("Digite o nome do fornecedor: ");
+        {
+
+            Console.WriteLine("\n=== CADASTRO DE FORNECEDORES ===\n");
+
+            Console.Write("Nome do fornecedor: ");
+
             string nome = Console.ReadLine();
-            Console.Write("Digite o CNPJ do fornecedor: ");
+
+            Console.Write("CNPJ: ");
+
             string cnpj = Console.ReadLine();
-            Console.Write("Digite o telefone do fornecedor: ");
+
+            Console.Write("Telefone: ");
+
             string telefone = Console.ReadLine();
-            Console.Write("Digite o nome da marca do fornecedor: ");
+
+            Console.Write("Marca: ");
+
             string marca = Console.ReadLine();
-            Console.WriteLine("Fornecedor cadastrado com sucesso!");
+
+            Console.WriteLine("\nFornecedor cadastrado com sucesso!");
+
             Thread.Sleep(1500);
+
         }
 
     }
