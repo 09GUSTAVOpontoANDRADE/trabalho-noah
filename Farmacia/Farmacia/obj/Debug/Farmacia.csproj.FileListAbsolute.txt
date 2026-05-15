@@ -1,0 +1,7 @@
+C:\Users\gustavo.handrade2\OneDrive - SENAC - SP\Documentos\cliente Noah\Farmacia\Farmacia\bin\Debug\Farmacia.exe.config
+C:\Users\gustavo.handrade2\OneDrive - SENAC - SP\Documentos\cliente Noah\Farmacia\Farmacia\bin\Debug\Farmacia.exe
+C:\Users\gustavo.handrade2\OneDrive - SENAC - SP\Documentos\cliente Noah\Farmacia\Farmacia\bin\Debug\Farmacia.pdb
+C:\Users\gustavo.handrade2\OneDrive - SENAC - SP\Documentos\cliente Noah\Farmacia\Farmacia\obj\Debug\Farmacia.csproj.AssemblyReference.cache
+C:\Users\gustavo.handrade2\OneDrive - SENAC - SP\Documentos\cliente Noah\Farmacia\Farmacia\obj\Debug\Farmacia.csproj.CoreCompileInputs.cache
+C:\Users\gustavo.handrade2\OneDrive - SENAC - SP\Documentos\cliente Noah\Farmacia\Farmacia\obj\Debug\Farmacia.exe
+C:\Users\gustavo.handrade2\OneDrive - SENAC - SP\Documentos\cliente Noah\Farmacia\Farmacia\obj\Debug\Farmacia.pdb
